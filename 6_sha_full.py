@@ -1,3 +1,6 @@
+def left_rotate(value, bits):
+    return ((value << bits) | (value >> (32 - bits))) & 0xffffffff
+    
 def sha1(message):
     data = bytearray(message.encode())
     original_length = len(data) * 8
